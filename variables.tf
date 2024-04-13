@@ -1,7 +1,8 @@
 variable "tools" {
   default = {
     prometheus = {
-      instance_type = "t3.small"
+      instance_type        = "t3.small"
+      policy-resource_list = ["ec2:DescribeInstances"]
     }
   }
 }
