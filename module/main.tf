@@ -28,7 +28,7 @@ resource "aws_iam_role" "role" {
         Effect = "allow"
         Sid    = ""
         Principal = {
-          Service = "ec2-amazonaws.com"
+          Service = "ec2.amazonaws.com"
         }
       },
     ]
@@ -37,4 +37,9 @@ resource "aws_iam_role" "role" {
   tags = {
     Name = "${var.tool_name}-role"
   }
+}
+
+resource "aws_im_instance_profile" "instance_profile"{
+  name = "${var.tool_name}-role"
+  role = aws_iam_role.role.name
 }
