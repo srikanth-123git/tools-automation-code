@@ -31,3 +31,5 @@ variable "tools" {
 variable "zone_id" {
   default = "Z0591896LOE9TNN6GUNS"
 }
+
+
