@@ -20,7 +20,7 @@ variable "tools" {
       policy_resource_list = []
     }
 
-    ci = {
+    ci-server = {
       instance_type        = "t3.small"
       policy_resource_list = []
     }
