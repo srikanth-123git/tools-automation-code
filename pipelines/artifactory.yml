@@ -18,4 +18,4 @@ pipelines:
           jobs:
             ansible:
               tasks:
-                - exec: {command: ansible-playbook, arguments: [ "-i", "artifactor-internal.psrikanth.online,", "tools.yml", "-e", "tool_name=artifactor", "-e", "ansible_user=ec2-user", "-e", "ansible_password=DevOps321" ], run_if: passed}
+                - exec: {command: ansible-playbook, arguments: [ "-i", "artifactory-internal.psrikanth.online,", "tools.yml", "-e", "tool_name=artifactory", "-e", "ansible_user=ec2-user", "-e", "ansible_password=DevOps321" ], run_if: passed}
