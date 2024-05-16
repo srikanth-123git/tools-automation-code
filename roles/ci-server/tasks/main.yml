@@ -50,3 +50,7 @@
     dest: /opt
     remote_src: yes
 
+- name: Install Zip
+  ansible.builtin.dnf:
+    name: zip
+    state: installed
