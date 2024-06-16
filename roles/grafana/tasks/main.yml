@@ -25,7 +25,7 @@
   community.grafana.grafana_folder:
     url: http://localhost:3000
     grafana_user: "admin"
-    grafana_password: "admin123"
+    grafana_password: "psrikanth@123"
     title: "ProjectDashboards"
     state: present
 
