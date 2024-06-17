@@ -1,15 +1,15 @@
-#- name: Set Prompt
-#  ansible.builtin.shell: set-prompt grafana
-#
-#- name: Copy grafana repo file
-#  ansible.builtin.template:
-#    src: grafana.repo
-#    dest: /etc/yum.repos.d/grafana.repo
-#
-#- name: Install Grafana
-#  ansible.builtin.dnf:
-#    name: grafana
-#    state: installed
+- name: Set Prompt
+  ansible.builtin.shell: set-prompt grafana
+
+- name: Copy grafana repo file
+  ansible.builtin.template:
+    src: grafana.repo
+    dest: /etc/yum.repos.d/grafana.repo
+
+- name: Install Grafana
+  ansible.builtin.dnf:
+    name: grafana
+    state: installed
 
 - name: Copy Datasource
   ansible.builtin.template:
@@ -17,9 +17,9 @@
     dest: /etc/grafana/provisioning/datasources/prom.yml
 
 - name: Copy template
-  ansible.builtin.template:
+  ansible.builtin.copy:
     src: sample-dash.json
-    dest: /tmp/sample-dash.json
+    dest: /tmp/node-exporter.json
 
 - name: Create a folder
   community.grafana.grafana_folder:
@@ -29,7 +29,7 @@
     title: "ProjectDashboards"
     state: present
 
-- name: Import Grafana dashboards folder
+- name: Import Grafana dashboards Node Exporter
   community.grafana.grafana_dashboard:
     grafana_url: http://localhost:3000
     grafana_user: "admin"
@@ -37,7 +37,7 @@
     state: present
     commit_message: Updated by ansible
     overwrite: true
-    path: /tmp/sample-dash.json
+    path: /tmp/node-exporter.json
     folder: ProjectDashboards
 
 - name: Start Grafana
