@@ -18,7 +18,7 @@
 
 - name: Copy template
   ansible.builtin.copy:
-    src: sample-dash.json
+    src: node-exporter.json
     dest: /tmp/node-exporter.json
 
 - name: Create a folder
