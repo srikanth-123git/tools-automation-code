@@ -26,7 +26,7 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 1860,
   "graphTooltip": 1,
-  "id": 8,
+  "id": 6,
   "links": [
     {
       "icon": "external link",
@@ -21865,7 +21865,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 33
+            "y": 49
           },
           "id": 221,
           "links": [],
@@ -21981,7 +21981,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 33
+            "y": 49
           },
           "id": 81,
           "links": [],
@@ -22097,7 +22097,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 43
+            "y": 59
           },
           "id": 115,
           "links": [],
@@ -22225,7 +22225,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 43
+            "y": 59
           },
           "id": 50,
           "links": [],
@@ -22352,7 +22352,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 53
+            "y": 69
           },
           "id": 55,
           "links": [],
@@ -22467,7 +22467,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 53
+            "y": 69
           },
           "id": 109,
           "links": [],
@@ -22643,7 +22643,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 63
+            "y": 79
           },
           "id": 299,
           "links": [],
@@ -22761,7 +22761,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 63
+            "y": 79
           },
           "id": 104,
           "links": [],
@@ -22854,32 +22854,6 @@
               "interval": "",
               "legendFormat": "OutRsts - Segments sent with RST flag",
               "refId": "F"
-            },
-            {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${datasource}"
-              },
-              "editorMode": "code",
-              "expr": "irate(node_netstat_TcpExt_TCPRcvQDrop{instance=\"$node\",job=\"$job\"}[$__rate_interval])",
-              "hide": false,
-              "interval": "",
-              "legendFormat": "TCPRcvQDrop - Packets meant to be queued in rcv queue but dropped because socket rcvbuf limit hit",
-              "range": true,
-              "refId": "G"
-            },
-            {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "${datasource}"
-              },
-              "editorMode": "code",
-              "expr": "irate(node_netstat_TcpExt_TCPOFOQueue{instance=\"$node\",job=\"$job\"}[$__rate_interval])",
-              "hide": false,
-              "interval": "",
-              "legendFormat": "TCPOFOQueue - TCP layer receives an out of order packet and has enough memory to queue it",
-              "range": true,
-              "refId": "H"
             }
           ],
           "title": "TCP Errors",
@@ -22968,7 +22942,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 73
+            "y": 89
           },
           "id": 85,
           "links": [],
@@ -23099,7 +23073,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 73
+            "y": 89
           },
           "id": 91,
           "links": [],
@@ -23231,7 +23205,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 83
+            "y": 99
           },
           "id": 82,
           "links": [],
@@ -23344,7 +23318,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 83
+            "y": 99
           },
           "id": 320,
           "links": [],
@@ -23780,8 +23754,8 @@
       {
         "current": {
           "selected": false,
-          "text": "10.10.0.47:9100",
-          "value": "10.10.0.47:9100"
+          "text": "10.10.0.90:9100",
+          "value": "10.10.0.90:9100"
         },
         "datasource": {
           "type": "prometheus",
