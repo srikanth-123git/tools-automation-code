@@ -11,9 +11,6 @@
   loop:
     - frontend
     - backend
-  delegate_to: localhost
-  become: false
-
 
 - name: Create Jobs
   community.general.jenkins_job:
